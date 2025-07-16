@@ -7,3 +7,15 @@ channel = "stable-23_11"
 
 [unitTest]
 language = "nodejs"
+
+[workflows]
+runButton = "Start Development Server"
+
+[[workflows.workflow]]
+name = "Start Development Server"
+author = 45062381
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run web"
